@@ -63,9 +63,9 @@
 (defn json
   [body]
   {:content-type :json 
-   :body  (http-client/json-encode body)})
+   :body (http-client/json-encode body)})
 
 (defn xml
   [body]
   {:content-type :xml 
-   :body  (-> body xml/sexp-as-element xml/emit-str)})
+   :body (-> body xml/sexp-as-element xml/emit-str)})

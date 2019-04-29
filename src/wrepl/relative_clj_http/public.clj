@@ -69,3 +69,8 @@
   [body]
   {:content-type :xml 
    :body (-> body xml/sexp-as-element xml/emit-str)})
+
+(defn edn
+  [body]
+  {:content-type :application/edn
+   :body (pr-str body)})

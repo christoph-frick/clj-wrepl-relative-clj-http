@@ -1,6 +1,5 @@
 (ns wrepl.relative-clj-http.public
   (:require [clj-http.client :as http-client]
-            [clojure.data.xml :as xml]
             [relative-clj-http.client :as client]))
 
 (def config
@@ -68,21 +67,3 @@
   ([]          (request :delete))
   ([path]      (request :delete path))
   ([path body] (request :delete path body)))
-
-(defn json
-  "Create a JSON request from the passed boddy"
-  [body]
-  {:content-type :json 
-   :body (http-client/json-encode body)})
-
-(defn xml
-  "Create a XML request from the passed boddy"
-  [body]
-  {:content-type :xml 
-   :body (-> body xml/sexp-as-element xml/emit-str)})
-
-(defn edn
-  "Create a EDN request from the passed boddy"
-  [body]
-  {:content-type :application/edn
-   :body (pr-str body)})

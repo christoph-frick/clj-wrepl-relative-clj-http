@@ -3,4 +3,5 @@
                  [integrant "0.7.0"]
                  [clj-http "3.10.0"]
                  [net.ofnir/relative-clj-http "0.1.3"]
-                 [net.ofnir/clj-http-request "0.1.0"]])
+                 [net.ofnir/clj-http-request "0.1.0"]]
+  :deploy-repositories [["releases" :clojars]])

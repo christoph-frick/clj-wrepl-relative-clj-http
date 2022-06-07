@@ -1,5 +1,5 @@
 (defproject net.ofnir/wrepl.relative-clj-http "0.1.2-SNAPSHOT"
-  :dependencies [[org.clojure/clojure "1.10.3"]
+  :dependencies [[org.clojure/clojure "1.11.1"]
                  [integrant "0.8.0"]
                  [clj-http/clj-http "3.12.3"]
                  [net.ofnir/relative-clj-http "0.1.4"]
